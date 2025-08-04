@@ -1,6 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Skills = () => {
+
+    const [isVisible, setIsVisible] = useState(false)
+    const [animatedSkills, setAnimatedSkills] = useState({})
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setIsVisible(true)
+                skills.forEach((skill, index) => {
+                    setTimeout(() => {
+                        setAnimatedSkills((prev) => ({
+                            ...prev,
+                            [skill.name]: skill.level,
+                        }))
+                    }, index * 200)
+                })
+            }
+        }, {threshold: 0.3})
+
+        const element = document.getElementById("skills")
+        if (element) observer.observe(element)
+        return () => observer.disconnect()   
+    }, [])
 
     const skills = [
         { name: "HTML/CSS", level: 85 },
@@ -39,7 +62,12 @@ const Skills = () => {
           <div className="container mx-auto max-w-7xl px-6 relative z-10">
               <div className='grid lg:grid-cols-2 gap-16'>
                   {/* Left Education */}
-                  <div className={`transition-all duration-1000`}>
+                  <div className={`transition-all duration-1000
+                        ${ isVisible 
+                            ? "opacity-100 translate-x-0"
+                            : "opacity-0 -translate-x-10"
+                        }
+                    `}>
                       <div className='mb-12'>
                           <p className='text-primary font-semibold text-lg mb-4]'> Qualification</p>
                           <p className='text-primary text-4xl font-bold mb-8'>Education</p>
@@ -58,7 +86,12 @@ const Skills = () => {
                       </div>
                   </div>
                   {/* Right Education */}
-                  <div className={`transition-all duration-1000 delay-300`}>
+                  <div className={`transition-all duration-1000 delay-300
+                        ${ isVisible 
+                            ? "opacity-100 translate-x-0"
+                            : "opacity-0 -translate-x-10"
+                        }
+                    `}>
                       <div className='mb-12'>
                           <p className='text-primary font-semibold text-lg mb-4'>Expert</p>
                           <p className='text-4xl font-black text-white mb-8'>My Skills</p>
@@ -67,14 +100,14 @@ const Skills = () => {
                       {/* Logic will be here */}
                       <div className='space-y-6'>
                           {skills.map((skill, index) => {
-                              return <div key={index} className={`space-y-2 transition-all duration-1000`}>
+                              return <div key={index} className={`space-y-2 transition-all duration-1000`} style={{transitionDelay: `${index * 150}ms`}}>
                                         <div className='flex justify-between items-center'>
                                             <span className='text-white font-medium group-hover:text-primary tansition-all duration-300'> {skill.name}</span>
                                             <span className='text-primary font-semibold'>{skill.level}%</span>
                                         </div>
                                         <div className='w-full bg-slate-700 rounded-full h-2 overflow-hidden relative'>
                                       <div className='bg-gradient-to-r from-cyan-500 to-cyan-400 h-2 rounded-full transition-all duration-1500 ease-out ralative'
-                                      style={{width: `${skill.level}%`}}>
+                                      style={{width: `${animatedSkills[skill.name] || 0}%`}}>
                                                <div className='absolute inset-0 bg-white/20'></div>
                                             </div>
                                         </div>
