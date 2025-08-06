@@ -37,9 +37,9 @@ const About = () => {
                           : "opacity-0 -translate-x-10"}
                          `}>
                           <div className='relative group'>
-                              <div className='w-full max-w-md mx-auto'>
+                              <div className='w-full max-w-xs mx-auto'>
                                   <div className='relative border-4 border-prDark rounded-2xl p-2 group-hover:border-accent transition-all duration-300'>
-                                      <img src={assets.profile_pic} className='w-full rounded-xl transition-all duration-500 group-hover:scale-105' alt="" />
+                                      <img src={assets.hninei} className='w-full rounded-xl transition-all duration-500 group-hover:scale-105' alt="" />
                                       <div className='absolute inset-2 bg-gradient-to-tr from-blue-600/10 to-transparent rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-500'></div>
 
                                       {/* Floating Decoration */}
@@ -58,7 +58,7 @@ const About = () => {
                                   <span className=''>next project?</span>
                               </h2>
                               <p className='text-primary font-semibold delay-200'>
-                                  UI / UX Designer & Web Developer
+                                  Full Stack Web Developer
                               </p>
                           </div>   
                           <div className='space-y-6 text-gray-300 leading-relaxed'>

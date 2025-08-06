@@ -95,14 +95,14 @@ const Hero = () => {
                         : "opacity-0 translate-y-10"}
                     `}>
                       <div className='relative'>
-                          <div className='w-full max-w-lg mx-auto'>
-                              <div className='relative group'>
-                                  <img src={assets.profile_pic}
+                          <div className='w-full max-w-md mx-auto'>
+                              <div className='items-center relative group'>
+                                  <img src={assets.hninei}
                                   className='w-full rounded-2xl shadow-2xl transition-all duration-500 group-hover:scale-105'/>
                               </div>
                           </div>
-                          <div className='absolute -top-4 -right-4 w-20 h-20 bg-green-500 rounded-2xl opacity-20'></div>
-                          <div className='absolute -bottom-4 -left-4 w-16 h-16 bg-blue-500 rounded-full opacity-20'></div>
+                          <div className='absolute -top-8 -right-0 w-20 h-20 bg-green-500 rounded-2xl opacity-20'></div>
+                          <div className='absolute -bottom-8 -left-0 w-16 h-16 bg-blue-500 rounded-full opacity-20'></div>
                       </div>
                   </div>
               </div>

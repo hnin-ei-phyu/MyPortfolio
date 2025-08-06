@@ -1,5 +1,5 @@
-import profile_pic from './my_pic.png'
+import hninei from './Hninei.jpg'
 
 export const assets = {
-    profile_pic
+    hninei
 }
