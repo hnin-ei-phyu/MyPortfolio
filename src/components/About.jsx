@@ -67,19 +67,17 @@ const About = () => {
                                     ? "opacity-100 translate-x-0"
                                     : "opacity-0 -translate-x-10"}
                                 `}>
-                                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident officiis
-                                  fugiat cupiditate temporibus placeat molestiae veniam harum qui dolorem odio
-                                  unde, ullam tempore, hic et dolore nulla accusamus amet laboriosam distinctio
-                                  voluptates ut dolorum corporis exercitationem. Totam veritatis natus sapiente
-                                  vitae rem nisi aliquam. Suscipit non fugit laudantium ratione illum.
+                                  I'm a fast learner and always looking to grow my skills, especially in real-world environments
+                                  I have a solid foundation in modern web development and I'm comfortable using tools like Git, 
+                                  React, and APIs. I work well with others and enjoy being part of a team.
                               </p>
                               <p className={`transition-all duration-1000 delay-700
                                 ${isVisible 
                                     ? "opacity-100 translate-x-0"
                                     : "opacity-0 -translate-x-10"}
                                 `}>
-                                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum explicabo expedita
-                                  ducimus? Ratione officia libero dignissimos rem cumque maxime beatae.
+                                  While I'm earl in my career, I'm confident that with the right environment, I'll grow quickly
+                                  and be a valuable part of your team.
                               </p>
                           </div>
                           <div className={`grid grid-cols-2 gap-8 py-6 transition-all duration-1000 delay-500

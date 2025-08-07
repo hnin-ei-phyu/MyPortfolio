@@ -31,6 +31,19 @@ const Experience = () => {
 
   const experiences = [
     {
+      company: "Northern City",
+      position: "Trainee",
+      period: "January 2022 - February 2023",
+      description: "Started my career building web applications and learning modern development practices, Contributed to both frontend and backend development in an agile enviroment.",
+      achievements: [
+        "Delivered 20+ features on time",
+        "Improved code coverage to 85%",
+        "Participated in code reviews"
+      ],
+      skills: ["PHP", "Laravel", "MySQL", "HTML", "CSS"],
+      location: "Hledan, Yangon, Myanmar"
+    },
+      {
       company: "Baby Ancestor IOT Company",
       position: "Junior Developer",
       period: "March 2023 - December 2023",
@@ -55,20 +68,8 @@ const Experience = () => {
       ],
       skills: ["React", "Vue.js", "Bootstrap", "Figma", "Tailwind"],
       location: "Thinkangyon, Yangon, Myanmar"
-    },
-    {
-      company: "Northern City",
-      position: "Trainee",
-      period: "January 2022 - February 2023",
-      description: "Started my career building web applications and learning modern development practices, Contributed to both frontend and backend development in an agile enviroment.",
-      achievements: [
-        "Delivered 20+ features on time",
-        "Improved code coverage to 85%",
-        "Participated in code reviews"
-      ],
-      skills: ["PHP", "Laravel", "MySQL", "HTML", "CSS"],
-      location: "Hledan, Yangon, Myanmar"
-    },
+    }
+   
 
   ]
 
@@ -136,7 +137,7 @@ const Experience = () => {
 
                   {/* Content Card */}
                   <div className={`ml-20 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-12" : "md:pl-12"}`}>
-                    <div className={`bg-slate-800 p-8 rounded-xl shadow-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-500 transform hover:scale-105 hover:shadow-red-500/20 group`}>
+                    <div className={`bg-slate-800 p-8 rounded-xl shadow-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 transform hover:scale-105 hover:shadow-red-500/20 group`}>
                       <div className='flex items-center gap-3 group-hover:transform group-hover:scale-0-105 transition-all duration-300'>
                         <div className='w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center group-hover:bg-cyan-500 transition-all duration-300 group-hover:rotate-6'>
                           <Briefcase className='w-6 h-6 text-white' />
@@ -177,7 +178,7 @@ const Experience = () => {
                         <ul className='space-y-2'>
                           {exp.achievements.map((achv, achindex) => {
                             return <li key={achindex} className={`text-gray-300 text-sm flex items-start gap-3 group-hover:text-white transition-all duration-300`}
-                                      style={{animationDelay: `${index * 300 + achindex * 200 + 1500}ms`,}}
+                                      style={{animationDelay: `${index * 300 + achindex * 100 + 1000}ms`,}}
                                     >
                                     <span className='w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0'></span>
                                     {achv}
@@ -194,7 +195,7 @@ const Experience = () => {
                                 key={skillIndex}
                                 className='bg-cyan-500 text-white text-xs font-semibold px-3 py-1 rounded-full transition-all duration-300 hover:bg-accent'
                               style={{
-                                animationDelay: `${index * 300 + skillIndex * 100 + 18000}ms`,
+                                animationDelay: `${index * 200 + skillIndex * 100 + 1800}ms`,
                                   }}
                               >
                                 {skill}
