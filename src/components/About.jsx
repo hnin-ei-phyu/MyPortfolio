@@ -27,7 +27,7 @@ const About = () => {
                 <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-transparent via-blue-600/5 to-transparent'></div>
           </div>
 
-          <div className="container mx-auto px-6 py-4">
+          <div className="container max-w-7xl mx-auto px-6 py-4">
               <div className='container px-6 relative z-10'>
                   <div className='grid lg:grid-cols-2 gap-16 items-space'>
                       {/* Left Image */}
@@ -54,8 +54,8 @@ const About = () => {
                           <div className='space-y-4'>
                               <p className='text-primary font-semibold text-lg'>About Us</p>
                               <h2 className='text-4xl md:text-5xl text-white font-bold animate-slide-up'>
-                                  Why hier me for your <br />
-                                  <span className=''>next project?</span>
+                                  Why am I a good fit<br />
+                                  <span className=''>for this role?</span>
                               </h2>
                               <p className='text-primary font-semibold delay-200'>
                                   Full Stack Web Developer
@@ -76,7 +76,7 @@ const About = () => {
                                     ? "opacity-100 translate-x-0"
                                     : "opacity-0 -translate-x-10"}
                                 `}>
-                                  While I'm earl in my career, I'm confident that with the right environment, I'll grow quickly
+                                  While I'm early in my career, I'm confident that with the right environment, I'll grow quickly
                                   and be a valuable part of your team.
                               </p>
                           </div>

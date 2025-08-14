@@ -89,7 +89,7 @@ const Header = () => {
                       {/* Logic will be here */}
                       {
                           navItems.map((item) => {
-                              return <button className='block w-full text-left py-3 px-4 text-gray-300 hover:text-accent hover:bg-slate-700 transition-all duration-300 rounded-lg'>
+                              return <button key={item} onClick={() =>scrollToSection(item.href)} className='block w-full text-left py-3 px-4 text-gray-300 hover:text-accent hover:bg-slate-700 transition-all duration-300 rounded-lg'>
                                         {item.name}
                                     </button>
                             })
